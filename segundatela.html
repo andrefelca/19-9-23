@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tela de Confirmação - Stopots</title>
+  <style>
+    body {
+        
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Confirmação de Entrada</h1>
+  <p>O jogador <strong id="playerName"></strong> está confirmado.</p>
+
+  <script>
+    // Obtém os dados da sessionStorage
+    const playerName = sessionStorage.getItem('playerName');
+    if (playerName) {
+      document.getElementById('playerName').textContent = playerName;
+    } else {
+      // Se não houver nome na sessionStorage, redireciona de volta para a tela de entrada
+      window.location.href = 'tela_entrada.html';
+    }
+  </script>
+</body>
+</html>
